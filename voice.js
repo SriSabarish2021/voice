@@ -1,13 +1,14 @@
-window.SpeechRecognition = window.SpeechRecognition||window.webkitSpeechRecognition;
 
-const recongnition=new SpeechRecognition()
-recongnition.interimResults=true;
+const speechrecongnition=new webkitSpeechRecognition() || new SpeechRecognition();
+speechrecongnition.continuous = true;
+speechrecongnition.interimResults = true
+speechrecongnition.lang = 'en-US'
 
 let para=document.createElement("p")
 const contain=document.querySelector(".container")
 contain.appendChild(para)
 
-recongnition.addEventListener('result',element =>{
+speechrecongnition.addEventListener('result',element =>{
 console.log(element)
 })
-recongnition.start() 
+speechrecongnition.start() 
