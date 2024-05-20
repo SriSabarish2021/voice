@@ -1,6 +1,5 @@
 
 const speechrecongnition=new webkitSpeechRecognition() || new SpeechRecognition();
-speechrecongnition.continuous = true;
 speechrecongnition.interimResults = true
 speechrecongnition.lang = 'en-US'
 
